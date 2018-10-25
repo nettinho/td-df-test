@@ -23,6 +23,15 @@ config :td_df, TdDfWeb.Endpoint,
   pubsub: [name: TdDf.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+
+config :td_df, TdDf.Repo,
+  adapter: nil,
+  username: nil,
+  password: nil,
+  database: nil,
+  hostname: nil,
+  pool_size: 10
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

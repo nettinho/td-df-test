@@ -46,8 +46,4 @@ config :td_df, TdDf.Repo,
   hostname: "localhost",
   pool_size: 10
 
-config :td_df, :api_services_login,
-  api_username: "api-admin",
-  api_password: "apipass"
-
 config :td_perms, redis_uri: "redis://localhost"
