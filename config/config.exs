@@ -25,11 +25,11 @@ config :td_df, TdDfWeb.Endpoint,
 
 
 config :td_df, TdDf.Repo,
-  adapter: nil,
-  username: nil,
-  password: nil,
-  database: nil,
-  hostname: nil,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "td_df_dev",
+  hostname: "localhost",
   pool_size: 10
 
 # Configures Elixir's Logger
