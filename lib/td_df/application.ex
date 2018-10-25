@@ -3,11 +3,16 @@ defmodule TdDf.Application do
   use Application
   alias TdDfWeb.Endpoint
 
+  @start_application Application.get_env(:td_df, :start_application)
+
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   def start(_type, _args) do
-    import Supervisor.Spec
+    do_start_app(@start_application)
+  end
 
+  defp do_start_app(true) do
+    import Supervisor.Spec
 
     # Define workers and child supervisors to be supervised
     children = [
@@ -33,6 +38,12 @@ defmodule TdDf.Application do
     opts = [strategy: :one_for_one, name: TdDf.Supervisor]
     Supervisor.start_link(children, opts)
   end
+  defp do_start_app(false) do
+    IO.puts "Skipping app start"
+    opts = [strategy: :one_for_one, name: TdDf.Supervisor]
+    Supervisor.start_link([], opts)
+  end
+
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.

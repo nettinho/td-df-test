@@ -51,6 +51,8 @@ config :td_df, user_cache_resolver: TdPerms.UserCache
 
 config :td_df, cache_templates_on_startup: true
 
+config :td_df, start_application: false
+
 config :td_perms, permissions: [
   :is_admin
 ]
