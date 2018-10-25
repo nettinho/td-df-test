@@ -7,7 +7,7 @@ defmodule TdDf.TemplateValidation do
   alias TdDf.TemplateLoader
 
   def get_content_changeset(content, template_name) do
-    {content: schema} = TemplateLoader.get_template_cotent(template_name)
+    %{content: schema} = TemplateLoader.get_template_cotent(template_name)
     build_changeset(content, schema)
   end
 
