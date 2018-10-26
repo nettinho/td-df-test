@@ -6,6 +6,11 @@ defmodule TdDf.TemplateValidation do
   alias Ecto.Changeset
   alias TdDf.TemplateLoader
 
+  @string "string"
+  @list "list"
+  @variable_list "variable_list"
+  @variable_map_list "variable_map_list"
+
   def get_content_changeset(content, template_name) do
     %{content: schema} = TemplateLoader.get_template_cotent(template_name)
     build_changeset(content, schema)

@@ -62,8 +62,7 @@ defmodule TdDf.TemplateLoader do
     {:ok, _} = DynamicFormCache.put_template_content(template)
   end
 
-
-  defp get_template_cotent(template_name) do
+  def get_template_cotent(template_name) do
     DynamicFormCache.get_template_content(template_name)
   end
 end

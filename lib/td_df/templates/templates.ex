@@ -6,14 +6,8 @@ defmodule TdDf.Templates do
   import Ecto.Query, warn: false
   alias TdDf.Repo
 
-  alias Ecto.Changeset
   alias TdDf.Templates.Template
   alias TdDf.TemplateLoader
-
-  @string "string"
-  @list "list"
-  @variable_list "variable_list"
-  @variable_map_list "variable_map_list"
 
   @doc """
   Returns the list of templates.

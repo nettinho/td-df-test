@@ -8,9 +8,6 @@ defmodule TdDfWeb.TemplateController do
   alias TdDfWeb.ChangesetView
   alias TdDfWeb.ErrorView
   alias TdDfWeb.SwaggerDefinitions
-  alias TdDfWeb.TemplateSupport
-
-  @preprocess "preprocess"
 
   action_fallback(TdDfWeb.FallbackController)
 
